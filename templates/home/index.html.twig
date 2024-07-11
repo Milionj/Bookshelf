@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil
+{% endblock %}
+
+{% block body %}
+	<h1>Nos livres à la une</h1>
+	<div class="row">
+		{% for b in books %}
+			<div class="col-lg-4 col-md-4">
+				{% include "partials/_book_card.html.twig" %}
+			</div>
+		{% endfor %}
+	</div>
+	<hr>
+	<h2>Informations pratiques</h2>
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem assumenda velit nostrum eaque ullam delectus accusantium ducimus commodi? Doloribus, in. Ratione dolore distinctio maxime sequi adipisci quia reprehenderit ullam deleniti esse, aspernatur eveniet officia sint veritatis laborum ipsum consequatur omnis autem optio facilis commodi tenetur! Impedit dolorum porro odit dolorem?</p>
+	<div class="row">
+		{% include "partials/_assurances.html.twig" with {
+            'color': 'primary',
+            'icone': 'fa-book-open-reader',
+            'text': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, harum?'
+        } %}
+		{% include "partials/_assurances.html.twig" with {
+            'color': 'success',
+            'icone': 'fa-solid fa-school',
+            'text': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, harum?'
+        } %}
+		{% include "partials/_assurances.html.twig" with {
+            'color': 'warning',
+            'icone': 'fa-solid fa-music',
+            'text': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, harum?'
+        } %}
+	</div>
+{% endblock %}
