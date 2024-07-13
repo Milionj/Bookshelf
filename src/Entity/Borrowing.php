@@ -44,7 +44,11 @@ class Borrowing
         $this->borrowingAt = new \DateTimeImmutable();
         $this->books = new ArrayCollection();
     }
-
+    public function isOverdue(): bool 
+    {
+        return $this->returnDateAt === null;
+    }
+    
     public function getId(): ?int
     {
         return $this->id;
