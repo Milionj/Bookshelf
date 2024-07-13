@@ -1,8 +1,8 @@
 # On clone le dépot !
-git clone https://github.com/StephaneBouret/bookshelf-course.git
+git clone https://github.com/Milionj/Bookshelf.git
 
 # On se déplace dans le dossier
-cd bookshelf-course
+cd bookshelf
 
 # On installe les dépendances !
 composer install 
