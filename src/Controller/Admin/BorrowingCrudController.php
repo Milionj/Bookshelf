@@ -115,7 +115,7 @@ class BorrowingCrudController extends AbstractCrudController
         $email = $user->getEmail();
 
         $this->sendMailService->sendEmail(
-            'contact@symbook.com',
+            'contact@bookshelf-course.com',
             'Bibliothèque',
             $email,
             'Relance de retour de livre',
